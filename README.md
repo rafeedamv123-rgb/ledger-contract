@@ -1,6 +1,6 @@
 # ledger-contract
 <br>
-T# Ledger dApp 
+## Ledger dApp 
 
 A simple Ethereum dApp that allows users to **deposit ETH** and **check their balance** using a Solidity smart contract and a frontend built with HTML, CSS, and JavaScript using **ethers.js**.
 
