@@ -81,7 +81,7 @@ let provider;
 let signer;
 let contract;
 let writecontract;
-let readcontract;
+let readprovider;
 async function connectnow (){
     if(typeof window.ethereum !== "undefined"){
         await ethereum.request({method : "eth_requestAccounts"});
@@ -93,7 +93,7 @@ async function connectnow (){
             window.ethereum
         );
         signer = await provider.getSigner();
-        readcontract = new ethers.Contract(contractaddress , abi , readprovider);
+        writecontract = new ethers.Contract(contractaddress , abi , readprovider);
         contract = new ethers.Contract(contractaddress , abi , signer);
 connect.innerHTML="connected!";
     }
