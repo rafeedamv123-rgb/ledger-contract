@@ -22,3 +22,4 @@ The project is divided into a frontend for user interaction and a Foundry-based 
 Contract address where the contract is deployed is 0x6267811fcfaa170006cd3f24ccc4b49ef674a3fa.
 This contract is deployed on sepolia test net using foundry's forge tools.
 
+If the deployed contract is not working, please use this link http://127.0.0.1:5500/index.html
