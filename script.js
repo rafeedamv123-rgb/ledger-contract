@@ -93,8 +93,8 @@ async function connectnow (){
             window.ethereum
         );
         signer = await provider.getSigner();
-        writecontract = new ethers.Contract(contractaddress , abi , readprovider);
-        contract = new ethers.Contract(contractaddress , abi , signer);
+        contract = new ethers.Contract(contractaddress , abi , readprovider);
+       writecontract = new ethers.Contract(contractaddress , abi , signer);
 connect.innerHTML="connected!";
     }
     else {
@@ -116,7 +116,7 @@ else {
 
 
 alert("setting to " + amount);
-const tx = await contract.deposit({
+const tx = await writecontract.deposit({
     value: ethers.parseEther(amount)
 });
 await tx.wait();
