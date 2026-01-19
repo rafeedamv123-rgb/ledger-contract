@@ -74,6 +74,7 @@ const abi =
     "anonymous": false
   }
 ]
+console.log("ADDR TYPE:", typeof contractaddress);
 const connect = document.getElementById("connect");
 connect.onclick = connectnow;
 let provider;
