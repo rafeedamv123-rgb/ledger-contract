@@ -93,7 +93,7 @@ async function connectnow (){
             window.ethereum
         );
         signer = await provider.getSigner();
-        readcontract = new ethers.Contract(contractAddress , abi , readprovider);
+        readcontract = new ethers.Contract(contractaddress , abi , readprovider);
         contract = new ethers.Contract(contractaddress , abi , signer);
 connect.innerHTML="connected!";
     }
