@@ -123,7 +123,7 @@ await tx.wait();
 alert("click balance button to see your balance in wei")}
 }
 const balance = document.getElementById("balance");
-const contractAddress = document.getElementById("contractaddress");
+const contractAddress = document.getElementById("showcontractaddress");
 balance.onclick = getbalance;
 async function getbalance(){
     const balanceamount = await contract.getBalance();
