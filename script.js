@@ -10,7 +10,7 @@ let readprovider;
 async function connectnow (){
     if(typeof window.ethereum !== "undefined"){
         await ethereum.request({method : "eth_requestAccounts"});
-       readprovider = new ethers.JsonRpcProvider("eth-sepolia.g.alchemy.com/v2/AOtJ9FjcF9TpK5tY0qkpp");
+       readprovider = new ethers.JsonRpcProvider("https://eth-sepolia.g.alchemy.com/v2/AOtJ9FjcF9TpK5tY0qkpp");
 
 
 
