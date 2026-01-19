@@ -81,7 +81,7 @@ let provider;
 let signer;
 let contract;
 let writecontract;
-let readprovider;
+let readcontract;
 async function connectnow (){
     if(typeof window.ethereum !== "undefined"){
         await ethereum.request({method : "eth_requestAccounts"});
