@@ -1,5 +1,5 @@
 import { ethers } from "https://cdn.jsdelivr.net/npm/ethers@6.10.0/+esm";
-import {contractaddress , abi} from "./constant.js";
+import { contractaddress , abi} from "./constant.js";
 const connect = document.getElementById("connect");
 connect.onclick = connectnow;
 let provider;
