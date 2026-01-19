@@ -5,14 +5,20 @@ connect.onclick = connectnow;
 let provider;
 let signer;
 let contract;
+let writecontract;
+let readprovider;
 async function connectnow (){
     if(typeof window.ethereum !== "undefined"){
         await ethereum.request({method : "eth_requestAccounts"});
-       
+       readprovider = new ethers.JsonRpcProvider("eth-sepolia.g.alchemy.com/v2/AOtJ9FjcF9TpK5tY0qkpp");
+
+
+
         provider = new ethers.BrowserProvider(
             window.ethereum
         );
         signer = await provider.getSigner();
+        readcontract = new ethers.Contract(contractAddress , abi , readprovider);
         contract = new ethers.Contract(contractaddress , abi , signer);
 connect.innerHTML="connected!";
     }
