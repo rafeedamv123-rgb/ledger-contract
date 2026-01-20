@@ -80,12 +80,12 @@ connect.onclick = connectnow;
 let provider;
 let signer;
 let contract;
-let writecontract;
-let readprovider;
+
+
 async function connectnow (){
     if(typeof window.ethereum !== "undefined"){
         await ethereum.request({method : "eth_requestAccounts"});
-       readprovider = new ethers.JsonRpcProvider("https://eth-sepolia.g.alchemy.com/v2/AOtJ9FjcF9TpK5tY0qkpp");
+      
 
 
 
@@ -93,8 +93,8 @@ async function connectnow (){
             window.ethereum
         );
         signer = await provider.getSigner();
-        contract = new ethers.Contract(contractaddress , abi , readprovider);
-       writecontract = new ethers.Contract(contractaddress , abi , signer);
+     
+       contract = new ethers.Contract(contractaddress , abi , signer);
 connect.innerHTML="connected!";
     }
     else {
@@ -116,7 +116,7 @@ else {
 
 
 alert("setting to " + amount);
-const tx = await writecontract.deposit({
+const tx = await contract.deposit({
     value: ethers.parseEther(amount)
 });
 await tx.wait();
