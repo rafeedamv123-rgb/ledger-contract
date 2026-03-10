@@ -3,15 +3,44 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>deposit</title>
+    <title>Ledger — Deposit</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600&family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <button id="connect" class="box">Connect to metamask </button>
-    <input id="depositnumber" class="box" type="number">
-    <button id="deposit" class="box">Deposit</button> 
-    <button id="balance" class="box"> Balance</button>
-    <button id="showcontractaddress" class="box">Contract address</button>
-    <script src="script.js" type ="module"></script>
+    <div class="noise"></div>
+    <header class="header">
+        <div class="header-inner">
+            <span class="logo">Ledger</span>
+            <span class="chain-badge">Web3</span>
+        </div>
+    </header>
+
+    <main class="main">
+        <section class="card">
+            <h1 class="card-title">Deposit</h1>
+            <p class="card-desc">Connect your wallet and manage deposits on-chain.</p>
+
+            <div class="actions">
+                <button id="connect" class="btn btn-primary" type="button">Connect to MetaMask</button>
+
+                <div class="input-group">
+                    <label class="label" for="depositnumber">Amount (ETH)</label>
+                    <input id="depositnumber" class="input" type="number" placeholder="0.0" min="0" step="any" inputmode="decimal">
+                </div>
+
+                <button id="deposit" class="btn btn-accent" type="button">Deposit</button>
+
+                <div class="row">
+                    <button id="balance" class="btn btn-ghost" type="button">Balance</button>
+                    <button id="showcontractaddress" class="btn btn-ghost" type="button">Contract address</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js" type="module"></script>
 </body>
 </html>
