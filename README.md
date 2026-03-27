@@ -40,6 +40,9 @@ A simple Ethereum dApp that lets users **deposit ETH** and **check their balance
 - Deployed with Foundry’s `forge` to Sepolia. If the deployed contract is unavailable, run and use the app locally (see below).
 
 ---
+## Check out the site
+
+https://ledger-contract1-fnev-6ejwjs8ig-rafeedamv123-rgbs-projects.vercel.app/
 
 ## Run Locally
 
